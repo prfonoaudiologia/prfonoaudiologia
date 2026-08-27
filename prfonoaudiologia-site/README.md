@@ -57,18 +57,11 @@ daquele painel.
       `assets/logo-full-white.png`).
 - [x] ~~Horário de atendimento~~ — "Segunda a sexta, das 9h às 18h".
 - [x] ~~Endereço~~ — R. Princesa Isabel, 94 - Cj 84, Pinheiros, São Paulo - SP, 01452-002.
-- [ ] **Formulário de contato** — precisa criar uma conta gratuita em https://formspree.io,
-      pegar o endpoint do formulário e colar no lugar de `SEU_ENDPOINT_AQUI` no arquivo
-      `index.html` (procure por esse texto — está comentado no código explicando onde mexer).
-- [ ] **Depoimentos** — a seção já está estruturada no código (comentada, dentro de
-      `index.html`, procure por "DEPOIMENTOS"), é só descomentar e preencher quando tiver
-      depoimentos reais de pacientes.
-- [ ] **Agendamento online (Calendly)** — hoje o "agendamento" é feito via WhatsApp com
-      mensagem pronta. Se quiser um calendário de verdade:
-      1. Criar conta gratuita em https://calendly.com
-      2. Configurar os horários disponíveis
-      3. Copiar o link de agendamento (ex: `calendly.com/prfonoaudiologia`)
-      4. Me avisar que eu incorporo o widget do Calendly na seção de Contato.
+- [x] ~~Formulário de contato~~ — conectado ao Formspree (endpoint da conta da Polyana);
+      as mensagens enviadas pelo site chegam direto no e-mail dela.
+- [x] ~~Agendamento online (Calendly)~~ — widget incorporado na seção "Contato"
+      (`calendly.com/prfonoaudiologia`), junto com um botão de acesso rápido na lista de
+      contato. O WhatsApp continua disponível como forma principal/alternativa de agendar.
 
 ## Sobre os arquivos de imagem (pasta `assets/`)
 
