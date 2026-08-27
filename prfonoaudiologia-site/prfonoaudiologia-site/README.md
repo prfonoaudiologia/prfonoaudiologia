@@ -38,9 +38,9 @@ Recomendo a **Vercel** (mais simples). O processo com Netlify é praticamente id
 5. Como é um site estático (sem build), pode deixar as configurações padrão e clicar em "Deploy".
 6. Em poucos segundos a Vercel gera um link tipo `prfonoaudiologia-site.vercel.app` — o site já estará no ar.
 
-### Conectando o domínio www.prfonoaudiologia.com.br
+### Conectando o domínio www.prfono.com.br
 
-1. Dentro do projeto na Vercel, vá em "Settings → Domains" e adicione `prfonoaudiologia.com.br` (e também `www.prfonoaudiologia.com.br`).
+1. Dentro do projeto na Vercel, vá em "Settings → Domains" e adicione `prfono.com.br` (e também `www.prfono.com.br`).
 2. A Vercel vai mostrar dois registros DNS para configurar (normalmente um registro `A` e um `CNAME`).
 3. Entre no painel do site onde o domínio foi registrado (Registro.br, GoDaddy, Hostinger etc.) e adicione esses registros na área de "DNS" ou "Zona DNS".
 4. A propagação pode levar de alguns minutos até 24h. Depois disso, o site já responde pelo domínio próprio.
@@ -50,32 +50,34 @@ daquele painel.
 
 ## Checklist do que falta preencher antes de publicar
 
-- [ ] **Foto profissional da Polyana** — substituir o selo/monograma decorativo no topo do
-      site (seção "Início") por uma foto de retrato dela.
-- [ ] **Foto do consultório/atendimento** — substituir o retângulo com o texto "Foto do
-      consultório / atendimento" na seção "Sobre".
-- [ ] **Logo em alta resolução** — se ela tiver o arquivo original da logo (o monograma "Pr"),
-      me manda que eu troco o monograma feito em CSS pela logo real.
-- [ ] **Horário de atendimento** — hoje está como "A confirmar" na seção de Contato.
-- [ ] **Formulário de contato** — precisa criar uma conta gratuita em https://formspree.io,
-      pegar o endpoint do formulário e colar no lugar de `SEU_ENDPOINT_AQUI` no arquivo
-      `index.html` (procure por esse texto — está comentado no código explicando onde mexer).
-- [ ] **Depoimentos** — a seção já está estruturada no código (comentada, dentro de
-      `index.html`, procure por "DEPOIMENTOS"), é só descomentar e preencher quando tiver
-      depoimentos reais de pacientes.
-- [ ] **Segundo WhatsApp (Clínica Multi)** — encontramos um número adicional
-      (+55 11 92004-2728) usado para agendamento em outro canal dela; hoje o site usa só o
-      WhatsApp principal (+55 11 95061-7487). Avise se quiser usar o outro número em algum
-      botão específico.
-- [ ] **Agendamento online (Calendly)** — hoje o "agendamento" é feito via WhatsApp com
-      mensagem pronta. Se quiser um calendário de verdade:
-      1. Criar conta gratuita em https://calendly.com
-      2. Configurar os horários disponíveis
-      3. Copiar o link de agendamento (ex: `calendly.com/prfonoaudiologia`)
-      4. Me avisar que eu incorporo o widget do Calendly na seção de Contato.
-- [ ] **Favicon e imagem de compartilhamento (og-image)** — hoje são placeholders gerados
-      automaticamente com as cores da marca (pasta `assets/`). Posso refinar assim que
-      tivermos a logo oficial em alta resolução.
+- [x] ~~Foto profissional da Polyana~~ — já usada na seção "Início" (`assets/photo-hero.jpg`).
+- [x] ~~Foto do consultório/atendimento~~ — já usada na seção "Sobre" (`assets/photo-about.jpg`).
+- [x] ~~Logo em alta resolução~~ — logo real aplicada no cabeçalho e no rodapé (recortada em
+      fundo transparente a partir dos arquivos que você mandou: `assets/logo-full-wine.png` e
+      `assets/logo-full-white.png`).
+- [x] ~~Horário de atendimento~~ — "Segunda a sexta, das 9h às 18h".
+- [x] ~~Endereço~~ — R. Princesa Isabel, 94 - Cj 84, Pinheiros, São Paulo - SP, 01452-002.
+- [x] ~~Formulário de contato~~ — conectado ao Formspree (endpoint da conta da Polyana);
+      as mensagens enviadas pelo site chegam direto no e-mail dela.
+- [x] ~~Agendamento online (Calendly)~~ — widget incorporado na seção "Contato"
+      (`calendly.com/prfonoaudiologia`), junto com um botão de acesso rápido na lista de
+      contato. O WhatsApp continua disponível como forma principal/alternativa de agendar.
+
+## Sobre os arquivos de imagem (pasta `assets/`)
+
+- `logo-full-wine.png` / `logo-mark-wine.png` — logo (completa e só o monograma) em vinho,
+  fundo transparente, para usar sobre fundos claros.
+- `logo-full-white.png` / `logo-mark-white.png` — mesma logo em branco, fundo transparente,
+  para usar sobre fundos escuros (ex: o rodapé, em azul-marinho).
+- `photo-hero.jpg` / `photo-about.jpg` — recortes da foto profissional que você enviou
+  (quadrado para o topo do site, retrato para a seção "Sobre").
+- `favicon.png` / `favicon-64.png` — ícone da aba do navegador, gerado a partir do monograma
+  real sobre um círculo vinho.
+- `og-image.jpg` — imagem que aparece ao compartilhar o link do site (WhatsApp/Instagram/etc.),
+  já usando a logo e as cores oficiais da marca.
+
+Se a Polyana tiver os arquivos originais da logo em vetor (SVG/AI/EPS) ou fotos adicionais,
+me manda que eu troco esses recortes pelos arquivos originais, com ainda mais qualidade.
 
 ## Rodando localmente antes de publicar
 
